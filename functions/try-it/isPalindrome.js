@@ -5,3 +5,6 @@ function reverse(str) {
 function isPalindrome(str) {
    return reverse(str) === str;
 }
+let testString = "race car"
+console.log(reverse(testString))
+console.log(isPalindrome(testString))

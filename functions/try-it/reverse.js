@@ -3,3 +3,5 @@ function reverse(str) {
    let reversedLettersArray = lettersArray.reverse();
    return reversedLettersArray.join('');
 }
+let testString = "Great"
+console.log(reverse(testString))
