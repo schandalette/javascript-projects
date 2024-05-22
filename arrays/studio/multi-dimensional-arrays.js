@@ -1,10 +1,21 @@
+const input = require('readline-sync');
 let food = "water bottles,meal packs,snacks,chocolate";
 let equipment = "space suits,jet packs,tool belts,thermal detonators";
 let pets = "parrots,cats,moose,alien eggs";
 let sleepAids = "blankets,pillows,eyepatches,alarm clocks";
+let cargoHold = [food, equipment, pets, sleepAids]
+let userInput = input.question("Select a cargo hold cabinet (0-3): ")
 
 //1) Use split to convert the strings into four cabinet arrays. Alphabetize the contents of each cabinet.
-
+food = food.split(",").sort();
+equipment = equipment.split(",").sort();
+pets = pets.split(",").sort();
+sleepAids = sleepAids.split(",").sort();
+if (userInput <= 3) {
+    console.log(`You have selected ${cargoHold[userInput]}`)
+}   else{
+    console.log("Cabinet selection invalid.");
+}
 //2) Initialize a cargoHold array and add the cabinet arrays to it. Print cargoHold to verify its structure.
 
 //3) Query the user to select a cabinet (0 - 3) in the cargoHold.
