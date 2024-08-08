@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Form Validation</title>
     <style>
-          label {display: block;}
-          body {padding: 25px;}
+      label {
+        display: block;
+      }
+      body {
+        padding: 25px;
+      }
     </style>
   </head>
   <script>
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
       let form = document.querySelector("form");
-      form.addEventListener("submit", function(event) {
-        alert("submit clicked");
+      form.addEventListener("submit", function (event) {
+        let usernameInput = document.querySelector("input[name=username]");
+        // alert the current value found in the username input
+        alert("username: " + usernameInput.value);
       });
     });
   </script>
   <body>
-    <form method="POST" action="https://handlers.education.launchcode.org/request-parrot">
-      <label>Username <input type="text" name="username"></label>
-      <label>Team Name <input type="text" name="team"></label>
-      <button>Submit</button>
+    <form
+      method="POST"
+      action="https://handlers.education.launchcode.org/request-parrot"
+    >
+      <label>Username <input type="text" name="username" /></label>
+      <label>Team Name <input type="text" name="team" /></label>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
